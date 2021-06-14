@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ucapan Idul Fitri 1443 H</title>
+  <link rel="stylesheet" href="css/ucapan-eid.css">
+  <link rel="stylesheet" href="https://raw.githack.com/Ray123fa/CSSrepo/main/star-animation.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+  <section id="myDisplay">
+    <div class="container">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+      <div class="text">
+        <p class="w3-container w3-animate-left">
+          Assalamu'alaikum Wr.Wb<br>
+        </p>
+        <p class="w3-container w3-animate-right">
+          Saya Rayhan Faridh beserta keluarga mengucapkan
+        </p>
+        <br>
+        <h2 class="w3-container w3-animate-zoom">Selamat Idul Fitri 1443 H<br><span>Minal 'Aidin wal-Faizin</span></h2>
+      </div>
+    </div>
+  </section>
+  <audio src="https://d.top4top.io/m_19423ihww1.mp3" loop id="musik"></audio>
+  <script>
+    //alert
+    Swal.fire({
+      html: '<p class="teks">Assalamu&#39alaikum Wr. Wb.<br>Sekedar mengingatkan bagi yang ada hutang mohon dibayar :v</p>',
+      showCancelButton: false,
+      confirmButtonText: 'OK',
+    }).then((result) => {
+      //fungsi menampilkan section after click OK
+      const myDisplay = document.getElementById('myDisplay');
+      setTimeout(() => {
+        myDisplay.style.display = 'flex';
+      }, 0)
+      //musik background
+      function music() {
+        var a = document.getElementById("musik");
+        if (a.paused) {
+          a.play();
+        }
+      }
+      //fungsi perizinan music autoplay tersirat
+      window.addEventListener("click", music)
+    })
+  </script>
+</body>
+</html>

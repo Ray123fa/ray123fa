@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+#myDisplay {
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+	background: linear-gradient(#020238,#0097EB);
+	display: none;
+}
+.container {
+	position: relative;
+	width: 100%;
+}
+.w3-animate-left, .w3-animate-right {
+	font-family: 'Poppins';
+	position: relative;
+	font-size: 18px;
+	text-align: center;
+	align-items: center;
+	color: #fff;
+	text-shadow: 0 5px 102px rgba(0,0,0,.20);
+	z-index: 2;
+	letter-spacing: 3px;
+}
+.text h2 {
+	font-family: 'Tangerine', cursive;
+	position: relative;
+	font-size: 70px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 5px 102px rgba(0,0,0,.20);
+	letter-spacing: 3px;
+}
+.text h2 span {
+	font-family: 'Tangerine', cursive;
+	font-size: 60px;
+	letter-spacing: 3px;
+}
+/*alert*/
+.teks {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	text-align: center;
+	font-weight: 300;
+}
+/*animation text*/
+.text .w3-animate-left {
+    animation: animateleft 5s;
+}
+@keyframes animateleft{
+    from{
+		left: -300px;
+		opacity: 0
+	}
+    to{
+		left: 0;
+		opacity: 1
+	}
+}
+
+.text .w3-animate-right {
+    animation: animateright 5s;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+@keyframes animateright{
+    from{
+		right: -300px;
+		opacity: 0
+	}
+    to{
+		right: 0;
+		opacity: 1
+	}
+}
+
+.text .w3-animate-zoom {
+    animation: animatezoom 5s;
+}
+@keyframes animatezoom{
+    from{
+		transform: scale(0)
+	}
+    to{
+		transform: scale(1)
+	}
+}
+/*media query*/
+@media (max-width: 600px) {
+    .w3-animate-left, .w3-animate-right {
+    	font-size: 14px;
+    }
+    .text h2 {
+    	font-size: 40px;
+    }
+    .text h2 span {
+        font-size: 30px;
+    }
+}

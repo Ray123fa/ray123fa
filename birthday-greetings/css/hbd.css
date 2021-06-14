@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  background: #E5B8B2;
+  font-family: 'Montserrat', sans-serif;
+}
+#myDisplay {
+  display: none;
+  margin: 100px 50px;
+}
+/*header*/
+img {
+  width: 100%;
+}
+.header {
+  box-shadow: 3px 3px black;
+  border-radius: 10px;
+  height: 100%;
+  background: linear-gradient(#393228,#9E8779);
+}
+/*konten*/
+h3 {
+  text-align: center;
+  padding: 30px 0;
+}
+.wish-right, .wish-left {
+  text-align: center;
+  font-size: 18px;
+}
+.wish-right {
+  padding: 0 20px;
+}
+.wish-left {
+  padding: 15px 20px;
+}
+.mywish {
+  padding-bottom: 20px;
+}
+.judul {
+  opacity: 0;
+}
+#main-konten {
+  padding-bottom: 10px;
+  margin-top: 45px;
+  background: #CE988C;
+  border-radius: 10px;
+  box-shadow: 3px 3px black;
+}
+/*animation*/
+.w3-animate-fading {
+  animation: fading 5s;
+}
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.active1 {
+  opacity: 1;
+  animation: fade-in 7s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*media query*/
+@media (max-width: 992px) {
+  #myDisplay {
+    margin: 200px 100px;
+  }
+}
+@media (max-width: 600px) {
+  #myDisplay {
+    margin: 100px 50px;
+  }
+}

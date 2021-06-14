@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Happy Birthday to You</title>
+  <link rel="stylesheet" href="css/hbd.css">
+
+  <!--Sweet Alert 2-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+  <section id="myDisplay">
+    <img class="header w3-animate-fading" src="https://e.top4top.io/p_1952fqz7h1.png">
+    <div id="main-konten">
+      <div class="judul">
+        <h3>Barakallah fii umrik</h3>
+      </div>
+      <div class="wish">
+        <p class="wish-right" data-scroll-animate="from-left">
+          Semoga segala rencana piyan di tahun ini dapat tercapai.
+        </p>
+        <p class="wish-left" data-scroll-animate="from-right">
+          Semoga sehat selalu, dimurahkan rezekinya, makin disayang orang-orang terdekat khususnya abah dan mama.
+        </p>
+        <p class="wish-right" data-scroll-animate="from-left">
+          Dan semoga segala perjuangan piyan di tahun ini membuahkan hasil. <b>Aamiin</b>
+        </p>
+        <p class="wish-left mywish" data-scroll-animate="from-right">
+          Sudah gin nah lah wkwk, intinya WYATB gasan kaka sepupu paling pengertian sekaligus membari muar mun lagi curhat masalah cowoo😌.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!--audio background-->
+  <audio id="hbd" src="https://k.top4top.io/m_1952lzhk91.mp3" loop></audio>
+
+  <!--javascript-->
+  <script src="https://raw.githack.com/Ray123fa/JSrepo/main/scroll-animation.js"></script>
+  <script src="https://raw.githack.com/Ray123fa/JSrepo/main/disable-right-click.js"></script>
+  <script>
+    Swal.fire({
+      html: '<p class="teks2"><b>Klik OK untuk mengizinkan musik memutar di browser.<br><br><i>Musik akan diputar berulang kali, untuk menghentikannya kamu bisa klik pause di notifikasi.</i></b></p>',
+      showCancelButton: false,
+      confirmButtonText: 'OK',
+    }).then((result) => {
+      /*fungsi menampilkan section after click OK*/
+      const myDisplay = document.getElementById('myDisplay');
+      setTimeout(() => {
+        myDisplay.style.display = 'block';
+      }, 0)
+      /*music background*/
+      function music() {
+        var a = document.getElementById("hbd");
+        if (a.paused) {
+          a.play();
+        }
+      }
+      /*fungsi perizinan music autoplay tersirat*/
+      window.addEventListener("click", music)
+    })
+
+    /*scroll animation*/
+    window.addEventListener("scroll", () => {
+      /*judul*/
+      let judul = document.querySelector(".judul");
+      let posisiJudul = judul.getBoundingClientRect().top;
+      let posisiLayar = window.innerHeight;
+
+      /*judul*/
+      if (posisiJudul < posisiLayar) {
+        judul.classList.add('active1');
+        judul.classList.add('fade-in');
+      } else {
+        judul.classList.remove('active1');
+        judul.classList.remove('fade-in');
+      }
+    })
+  </script>
+</body>
+</html>

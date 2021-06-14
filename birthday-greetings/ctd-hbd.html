@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>HBD - Countdown</title>
+  <link rel="stylesheet" href="css/ctd-hbd.css" />
+</head>
+<body>
+  <section id="ctd"></section>
+  <a href="#ctdbox">
+    <div class="header">
+      <img src="https://h.top4top.io/p_1955e1b4s1.png">
+    </div>
+  </a>
+  <div class="wrapper">
+    <div class="img"></div>
+    <div id="ctdbox">
+      <h2>Countdown to Your Birthday</h2>
+      <div class="ctd">
+        <div id="day">
+          NA
+        </div>
+        <div id="hour">
+          NA
+        </div>
+        <div id="minute">
+          NA
+        </div>
+        <div id="second">
+          NA
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--javascript-->
+  <script src="https://raw.githack.com/Ray123fa/JSrepo/main/disable-right-click.js"></script>
+  <script>
+    //alert
+    alert("Klik OK habis itu klik gambarnya. Nah ada hitung mundur lo serah ja hdk mehadangi sampai 00 kah🤣 ekd canda.");
+    alert("Kena pas sdh 00 tuh hadangi ja webnya meredirect ke web lain, bila sdh di redirect itu to kadonya🤣. Kado online dulu lah kado offline nya kena di hotel😂")
+    //countdown script
+    var countDate = new Date("11 May, 2021 00:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+
+      document.getElementById("day").innerHTML = days;
+      document.getElementById("hour").innerHTML = hours;
+      document.getElementById("minute").innerHTML = minutes;
+      document.getElementById("second").innerHTML = seconds;
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("ctd").innerHTML = location.replace("hbd.html")
+      }
+    })
+  </script>
+</body>
+</html>

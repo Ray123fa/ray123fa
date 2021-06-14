@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/*default content*/
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(#020238,#0097EB);
+}
+.wrapper #ctdbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper #ctdbox h2 {
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+    line-height: 4em;
+    margin-bottom: 30px;
+}
+.wrapper #ctdbox .ctd {
+    margin-top: 30px;
+    background: rgba(0,0,0,0.1);
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper #ctdbox .ctd div {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 4em;
+    font-weight: 500;
+    margin: 0 15px;
+    margin-top: -45px;
+}
+.wrapper #ctdbox .ctd div:before {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/*print type time*/
+.wrapper #ctdbox .ctd div#day:before {
+    content: 'Hari';
+}
+.wrapper #ctdbox .ctd div#hour:before {
+    content: 'Jam';
+}
+.wrapper #ctdbox .ctd div#minute:before {
+    content: 'Menit';
+}
+.wrapper #ctdbox .ctd div#second:before {
+    content: 'Detik';
+}
+.wrapper #ctdbox .ctd div#second,
+.wrapper #ctdbox .ctd div#second:before {
+    color: #7FFFD4;
+}
+
+/*media query*/
+@media screen and (max-width:992px) {
+    .wrapper #ctdbox {
+        width: 100%;
+    }
+    .wrapper #ctdbox h2 {
+        font-size: 4em;
+        line-height: 2em;
+    }
+}
+@media screen and (max-width:600px) {
+    .wrapper #ctdbox h2 {
+        font-size: 30px;
+        line-height: 2em;
+        margin-bottom: 10px;
+    }
+    .wrapper #ctdbox .ctd {
+        height: 100px;
+    }
+    .wrapper #ctdbox .ctd div {
+        width: 80px;
+        font-size: 2em;
+        margin: 0;
+        margin-top: -30px;
+    }
+    .wrapper #ctdbox .ctd div:before {
+        font-size: 16px;
+    }
+}
+@media screen and (max-height: 425px) {
+    .wrapper #ctdbox {
+        width: 100%;
+    }
+    .wrapper #ctdbox h2 {
+        font-size: 2.1em;
+        line-height: 1.2em;
+    }
+    .wrapper #ctdbox .ctd {
+        height: 100px;
+    }
+    .wrapper #ctdbox .ctd div {
+        width: 80px;
+        font-size: 2em;
+        margin: 0;
+        margin-top: -30px;
+    }
+    .wrapper #ctdbox .ctd div:before {
+        font-size: 16px;
+    }
+}

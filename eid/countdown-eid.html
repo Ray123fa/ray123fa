@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Countdown - EID</title>
+  <link rel="stylesheet" href="css/countdown-eid.css">
+
+  <!--Sweet Alert 2-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+  <section id="ctd" style="display: none;"></section>
+  <div class="wrapper">
+    <div id="ctdbox">
+      <h2>Idul Fitri<br><span>1443 H</span></h2>
+      <div class="ctd">
+        <div id="day">
+          NA
+        </div>
+        <div id="hour">
+          NA
+        </div>
+        <div id="minute">
+          NA
+        </div>
+        <div id="second">
+          NA
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--audio background-->
+  <audio src="https://e.top4top.io/m_1949mclyo1.mp3" loop id="takbir"></audio>
+  <!--javascript-->
+  <script>
+    <!--countdown script-->
+    var countDate = new Date("3 May, 2022 00:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDate - now;
+
+      var h = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var j = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var d = Math.floor((distance % (1000 * 60)) / (1000));
+
+      document.getElementById("day").innerHTML = h;
+      document.getElementById("hour").innerHTML = j;
+      document.getElementById("minute").innerHTML = m;
+      document.getElementById("second").innerHTML = d;
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("ctd").innerHTML = location.replace("ucapan-eid.html")
+      }
+    })
+    //alert
+    Swal.fire({
+      html: '<p class="teks">Assalamu&#39alaikum Wr. Wb.<br>Saya Rayhan F mengucapkan Selamat Hari Raya Idul Fitri ke 1443 H<br>Mohon maaf lahir dan batin.</p>',
+      showCancelButton: false,
+      confirmButtonText: 'OK',
+    }).then((result) => {
+      //musik background
+      function music() {
+        var a = document.getElementById("takbir");
+        if (a.paused) {
+          a.play();
+        }
+      }
+      //fungsi perizinan music autoplay tersirat
+      window.addEventListener("click", music)
+    })
+  </script>
+</body>
+</html>
