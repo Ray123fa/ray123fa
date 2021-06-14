@@ -1,0 +1,105 @@
+/*
+margin/padding: atas kanan bawah kiri
+box-shadow: bawah kanan warna
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+:root {
+  --ghostwhite: #F8F8FF;
+  --gainsboro: #DCDCDC;
+  --ivory: #FFFFF0;
+}
+body {
+  font-family: 'Poppins', sans-serif!important;
+  background: linear-gradient(var(--gainsboro), var(--ivory))!important;
+  min-height: 100vh;
+}
+main {
+  padding: 30px;
+  margin: 20px 40px 20px 40px!important;
+  background: var(--ghostwhite);
+  border-radius: 10px;
+  box-shadow: 2px 1px black;
+}
+.myimage {
+  animation: fade 3s;
+}
+main h3 {
+  margin-bottom: 0.5cm;
+}
+main p {
+  text-indent: 1cm;
+  text-align: justify;
+  font-size: 15px;
+}
+main .end {
+  margin: 0!important;
+  padding: 0!important;
+}
+.php-email-form {
+  width: 100%!important;
+  padding: 30px!important;
+  background: #fff!important;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12)!important;
+}
+.php-email-form .form-group {
+  padding-bottom: 8px!important;
+  margin-bottom: 15px!important;
+}
+.php-email-form label {
+  padding-bottom: 8px!important;
+}
+.php-email-form input, .php-email-form textarea {
+  border-radius: 0!important;
+  box-shadow: none!important;
+  font-size: 14px!important;
+}
+.php-email-form input {
+  height: 44px!important;
+}
+.php-email-form .mybtn{
+  padding: 5px 10px;
+  border: 0!important;
+  color: #fff!important;
+  transition: 0.4s!important;
+  border-radius: 4px!important;
+}
+.php-email-form .mybtn:hover {
+  background: #37b3ed!important;
+}
+footer {
+  background-color: #212529;
+  color: #FFFFFF;
+  padding: 10px;
+  display: grid;
+}
+.text {
+  font-size: 14px;
+}
+#kredit {
+  font-size: 14px;
+}
+.kredit {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
