@@ -96,7 +96,7 @@
               <li><hr class="dropdown-divider"></li>
               <li>
                 <div class="dropdown-item myproject">
-                  <a id="myproject" href="jadwal-sholat/index.php" style="font-weight: bold;">Jadwal Sholat</a>
+                  <a id="myproject" href="waktu-sholat/index.php" style="font-weight: bold;">Jadwal Sholat</a>
                 </div>
               </li>
             </ul>
