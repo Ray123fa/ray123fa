@@ -369,7 +369,7 @@
 
           <!--Modal Footer-->
           <div class="modal-footer">
-            <a class="btn btn-primary" href="jadwal-sholat.php">Back to Default</a>
+            <a class="btn btn-primary" href="index.php">Back to Default</a>
           </div>
         </div>
       </div>
