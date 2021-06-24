@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Jadwal Sholat</title>
+  <title>Waktu Sholat</title>
 
   <!--Bootstrap 5-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -188,14 +188,14 @@
         <div class="modal-content">
           <div class="modal-body">
             <center>
-              <button onclick="getLocation()">Click this</button>
+              <button class="btn btn-secondary" onclick="getLocation()">Click this</button>
               <br>
               <br>
               <form action="" method="get">
                 <input type="text" name="latitude" id="latitude" placeholder="Latitude" value="" readonly>
                 <input type="text" name="longitude" id="longitude" placeholder="Longitude" value="" readonly>
                 <br><br>
-                <button type="submit" name="go" value="go">Go</button>
+                <button class="btn btn-primary" type="submit" name="go" value="go">Go</button>
               </form>
             </center>
           </div>
