@@ -22,8 +22,8 @@ if (isset($_POST['submit'])) {
   $email = $_POST['email'];
   $pesan = $_POST['pesan'];
 
-  $token = "1844981336:AAEoEuFh6Fqg50mrma7e-jNBqZ5mTno-aq0";
-  $chat_id = "1085618112";
+  $token = "5549392155:AAGYdCxoKQTcrOSTfLNAtx-GV258TjsOKQI";
+  $chat_id = "5369790259";
   $msg = urlencode("<b>Dari:</b>\nNama: $nama\nEmail: $email\n\n<b>Pesan:</b>\n$pesan");
   
   $result = http_request("https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&parse_mode=html&text=$msg");
