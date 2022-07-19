@@ -115,6 +115,13 @@
               <li><hr class="dropdown-divider"></li>
               <li>
                 <div class="dropdown-item mysocial">
+                  <span class="fab fa-twitter"></span>
+                  <a id="mysocial" href="https://www.twitter.com/xyz162ridh" style="font-weight: bold;">    Twitter</a>
+                </div>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <div class="dropdown-item mysocial">
                   <span class="fab fa-line"></span>
                   <a id="mysocial" href="https://line.me/ti/p/~rayhanf1602" style="font-weight: bold;">    LINE</a>
                 </div>
